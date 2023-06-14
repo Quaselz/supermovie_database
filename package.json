@@ -1,14 +1,14 @@
 {
-  "homepage": "http://{github-username}.github.io/{repo-name}",
+  "homepage": "http://quaselz.github.io/supermovie_database",
   "name": "supermovie_database",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "main -d build",
+    "deploy": "gh-pages -d build",
+    "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
