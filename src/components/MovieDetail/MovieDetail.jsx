@@ -1,17 +1,20 @@
 import './MovieDetail.css'
-const MovieDetail = () => {
+import { Link } from 'react-router-dom'
+
+const MovieDetail = ({id, title, year, director, duration, genre, rate}) => {
+    const link = "/movie/" + title
     return ( 
         <article>
-            <h3>title</h3>
-            <p>year</p>
-            <p>person</p>
-            <p>duration</p>
-            <p>joa</p>
-            <ul>
-                <li>genre</li>
-                <li>genre</li>
-                <li>genre</li>
-            </ul>
+            <Link to={link} >
+                <h3>{title}</h3>
+                <p>{year}</p>
+                <p>{director}</p>
+                <p>{duration}</p>
+                <p>rate</p>
+                <ul>
+                    {genre.map((item,i) => <li key={i}>{item}</li>)}
+                </ul>
+            </Link>
         </article>
      );
 }
