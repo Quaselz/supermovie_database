@@ -15,7 +15,7 @@ function App() {
   return (
     <>
     <loadContext.Provider value={{ load, setLoad }}>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.DEV ? '/' : '/react-vite-gh-pages/'}>
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/contact" element={<Contact />}/>
