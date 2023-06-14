@@ -1,0 +1,63 @@
+.dd-wrapper {
+	position: relative;
+}
+.dd-list {
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: 10;
+
+	top: 100%;
+	left: 0;
+	text-align: left;
+}
+.dd-header-title,
+.dd-list-item {
+	width: 100px;
+}
+
+.dd-header-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.dd-list.visible {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
+.arrow {
+	position: relative;
+	height: 15px;
+	width: 15px;
+}
+.arrow::before,
+.arrow::after {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	width: 0.15rem;
+	height: 100%;
+	transition: all 0.5s;
+}
+.arrow::before {
+	left: -5px;
+	transform: rotate(45deg);
+	background-color: #394a6d;
+}
+.arrow::after {
+	left: 5px;
+	transform: rotate(-45deg);
+	background-color: #394a6d;
+}
+.dd-list.visible .arrow::before {
+	left: -5px;
+	transform: rotate(-45deg);
+}
+.dd-list.visible .arrow::after {
+	left: 5px;
+	transform: rotate(45deg);
+}

@@ -1,0 +1,39 @@
+.movieArticle {
+	padding: var(--gab);
+}
+.movieArticle div {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	text-align: left;
+}
+
+.movieArticle a {
+	color: var(--white);
+}
+
+.movieArticle a:hover {
+	color: var(--white);
+}
+.movieArticle:hover h3 {
+	border-bottom: 1px solid var(--foured-color);
+}
+.movieArticle h3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	color: var(--white);
+	border-bottom: 1px solid var(--white);
+	transition: border 0.3s ease;
+	min-height: 110px;
+	text-align: center;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.movieArticle p {
+	padding: 0;
+	margin: 0;
+}

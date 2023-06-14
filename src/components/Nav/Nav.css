@@ -1,0 +1,80 @@
+header {
+	width: 100%;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: var(--gab);
+}
+nav .logoContainer img {
+	width: 100px;
+	height: 100px;
+	border-radius: 20%;
+	cursor: pointer;
+}
+
+nav div:nth-child(2) {
+	width: 70%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+nav div:nth-child(2) div {
+	width: 100%;
+	height: 40px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: color 0.3s ease;
+	box-shadow: 0 4px 3px -2px var(--foured-color);
+}
+nav div:nth-child(2) div div:nth-child(2) {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--foured-color);
+	opacity: 0.1;
+	top: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: top 0.3s ease;
+	z-index: 5;
+}
+
+nav div a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: color 0.3s ease;
+	position: relative;
+	z-index: 20;
+	background-color: transparent;
+}
+
+nav div a:hover {
+	color: var(--foured-color);
+}
+
+nav div:nth-child(2) div:hover > div:nth-child(2) {
+	top: 0;
+}
+nav div:nth-child(2) div:nth-child(1),
+nav div:nth-child(2) div:nth-child(2) {
+	box-shadow: 4px 4px 4px -2px var(--foured-color);
+}
+nav div:nth-child(2) div:first-child div {
+	border-radius: 100% 0 0 0;
+}
+
+nav div:nth-child(2) div:last-child div {
+	border-radius: 0 100% 0 0;
+}

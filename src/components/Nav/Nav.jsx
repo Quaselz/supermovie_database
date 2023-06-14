@@ -6,13 +6,22 @@ const Nav = () => {
             <nav>
                 <div>
                 <NavLink to="/">
-                    <img src="" alt="Logo" />
+                    <img src="./public/session.jpg" alt="Logo" className="logo"/>
                 </NavLink>
                 </div>
                 <div>
-                    <NavLink to="/">Home </NavLink>
-                    <NavLink to="/movies">Movies </NavLink>
-                    <NavLink to="/contact">Contact </NavLink>
+                    <div>
+                        <NavLink to="/">Home </NavLink>
+                        <div></div>
+                    </div>
+                    <div>
+                        <NavLink to="/movies">Movies </NavLink>
+                        <div></div>
+                    </div>
+                    <div>
+                        <NavLink to="/contact">Contact </NavLink>
+                        <div></div>
+                    </div>
                 </div>
             </nav>
         </header>
