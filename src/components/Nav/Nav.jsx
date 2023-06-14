@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 import './Nav.css'
+import logo from '../../assets/session.jpg'
 const Nav = () => {
     return ( 
         <header>
             <nav>
                 <div>
                 <NavLink to="/">
-                    <img src="./public/session.jpg" alt="Logo" className="logo"/>
+                    <img src={logo} alt="Logo" className="logo"/>
                 </NavLink>
                 </div>
                 <div>
