@@ -15,7 +15,7 @@ function App() {
   return (
     <>
     <loadContext.Provider value={{ load, setLoad }}>
-      <BrowserRouter basename={import.meta.env.DEV ? '/' : '/supermovie_database/'}>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/contact" element={<Contact />}/>
