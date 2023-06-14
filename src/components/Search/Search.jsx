@@ -1,4 +1,6 @@
-const Sort = ({setSort, setFilter}) => {
+import GenreFilt from './GenreFilt/GenreFilt';
+import './Search.css'
+const Search = ({setSort, setFilter, genre, setGenre}) => {
     return ( 
         <>
             <h5>Sort</h5>
@@ -10,9 +12,10 @@ const Sort = ({setSort, setFilter}) => {
                 <button onClick={() => setSort(() => (a, b) => b.rate - a.rate)}>Best Rate</button>
                 <button onClick={() => setSort(() => (a, b) => a.title.toUpperCase() > b.title.toUpperCase()? -1:1)}>A-Z</button>
                 <button onClick={() => setSort(() => (a, b) => b.title.toUpperCase() > a.title.toUpperCase()? -1:1)}>Z-A</button>
+                <GenreFilt genre={genre} setGenre={setGenre}/>
             </div>
         </>
      );
 }
  
-export default Sort;
+export default Search;
