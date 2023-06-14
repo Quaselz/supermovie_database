@@ -10,7 +10,7 @@ const MovieDetail = ({id, title, year, director, duration, genre, rate}) => {
                 <p>{year}</p>
                 <p>{director}</p>
                 <p>{duration}</p>
-                <p>rate</p>
+                <p>{rate}</p>
                 <ul>
                     {genre.map((item,i) => <li key={i}>{item}</li>)}
                 </ul>
